@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Entrez le nom de l'utilisateur a supprimer : "
+read name
+
+if [ getent passwd | grep $name ]
+then passwd -l $name
+	killall -KILL -u $name
+	crontab -r -u $name
+	userdel -r $name
+else echo "User doesn't exist"
+fi

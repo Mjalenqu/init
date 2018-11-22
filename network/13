@@ -1,0 +1,6 @@
+Server:		10.51.1.5
+Address:	10.51.1.5#53
+
+1.10.3.10.in-addr.arpa	name = z3r10p1.le-101.fr.
+
+## commande : nslookup de l'ip du poste

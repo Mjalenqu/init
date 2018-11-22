@@ -1,0 +1,22 @@
+root@debian:/etc# rcconf --list
+ssh on
+unattended-upgrades on
+kmod on
+keyboard-setup.sh on
+minissdpd on
+cron on
+pppd-dns on
+speech-dispatcher on
+console-setup.sh on
+avvahi-deamon on
+bluetooth on
+procps on
+undev on
+network-manager on
+saned on
+gdm3 on
+rsyslog on
+dbus on
+anacron on
+x11-common on
+alsa-utils on

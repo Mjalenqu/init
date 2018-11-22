@@ -1,0 +1,2 @@
+ifconfig -L en1 | grep "flags" | cut -d "<" -f1 && ifconfig -L en1 | grep "ether " | rev | cut -c 2- | rev 
+

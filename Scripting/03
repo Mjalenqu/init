@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if rcconf --list | grep "off"
+then echo "Some services are disable, would you like to turn on them ? [O/n]"
+	read answer
+	if [ $answer="O" ];
+	then test=`rcconf --list|grep "off"`
+		rcconf --on $test
+		if rcconf --list | grep "off"
+		then echo "$test is still unvailable, please restart computer";
+		fi
+	else
+		echo "$test is unvailable, please restart computer";
+	fi
+fi
+crontab -l > /tmp/tampon.txt
+echo "*/5 * * * * /home/dieux/script/03.sh >> /etc/save.log" >> /tmp/tampon.txt
+crontab /tmp/tampon.txt
+rm -f tmp/tampon.txt

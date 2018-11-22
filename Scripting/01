@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+gentent paswwd | cut -d ":" -f1,3,7
+
+# cat /etc/passwd | cut -d ":" -f1,3,7 sur MacOsX
